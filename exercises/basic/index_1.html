@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Exercise 1</title>
+    </head>
+
+<body>
+    
+    <p>Click the button to display the day of the week and time (time Zone: Europe/London). </p>
+
+<button onclick="myFunction()">Click me </button>
+
+<h1 id="demo"></h1>
+
+</body>
+<script>
+    function myFunction() {
+  var d = new Date();
+  var day = new Array(7);
+  day[0] = "Sunday";
+  day[1] = "Monday";
+  day[2] = "Tuesday";
+  day[3] = "Wednesday";
+  day[4] = "Thursday";
+  day[5] = "Friday";
+  day[6] = "Saturday";
+	
+var d = new Date();
+var hours = d.getHours() ; 
+var AmOrPm = hours >= 12?  'PM' : 'AM';
+hours = (hours % 12) || 12;
+var minutes = d.getMinutes() ;
+var seconds = d.getSeconds() ;
+
+	var n = "Today is" + " "  +day[d.getDay()] +","  +  " and the current time is: "  + hours + " " + AmOrPm + " : " + minutes + "m" + " : " + seconds  + "s" + "." ;
+	
+	
+  document.getElementById("demo").innerHTML = n;
+}
+
+</script>
+</html>
+
+

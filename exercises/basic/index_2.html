@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Exercise 1</title>
+    </head>
+<body>
+    <p class="String" id="RotateString">
+        jsIsAwesome
+      </p>
+</body>
+
+<script>
+
+        var string = document.getElementById("RotateString").textContent;
+        function rotateString() {
+        string = string.charAt(string.length - 1) + string.substring(0, string.length - 1);
+        document.getElementById("RotateString").innerHTML = string;  
+}
+
+setInterval(rotateString, 600);
+</script>
+</html>
