@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Exercise 5</title>
+    </head>
+<body>
+    <input type="number" placeholder="1 mile" value="" id="miles"><button id="convert">Equals</button><input type="text" placeholder="1.6km" id="km" readonly>
+      
+</body>
+
+<script>
+function convert() {
+	const miles = document.getElementById('miles').value
+	document.getElementById('km').value = (miles * 1.6) + "km";
+}
+document.getElementById('convert').addEventListener("click", convert);
+    
+</script>
+</html>
