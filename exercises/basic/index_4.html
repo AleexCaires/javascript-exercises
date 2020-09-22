@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Exercise 4</title>
+    </head>
+<body>
+    <h1 id="daysLeft"></h1>
+</body>
+
+<script>
+    let today = new Date();
+let xmas = new Date(today.getFullYear(), 11, 25);
+if (today.getMonth() == 11 && today.getDate() > 25) {
+  xmas.setFullYear(xmas.getFullYear() + 1);
+}
+var oneDay = 1000 * 60 * 60 * 24;
+var daysLeft = Math.ceil((xmas.getTime() - today.getTime()) / (oneDay)) +
+  " days for Santa deliver your presents!";
+
+document.getElementById("daysLeft").innerHTML = daysLeft;
+
+
+</script>
+</html>
